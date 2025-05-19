@@ -1,12 +1,13 @@
 import React from 'react';
 import { Line } from 'react-chartjs-2';
 import { Col, Row, Typography } from 'antd';
+import Loader from './Loader';
 
 const { Title } = Typography;
 
 const LineChart = ({ coinHistory, currentPrice, coinName }) => {
     if (!coinHistory || !coinHistory.data || !coinHistory.data.history) {
-        return <div>Loading chart data...</div>;
+        return <Loader />;
     }
 
     const coinPrice = [];
