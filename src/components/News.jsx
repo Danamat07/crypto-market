@@ -14,7 +14,7 @@ const demoImage = 'https://coinrevolution.com/wp-content/uploads/2020/06/crypton
 
 const News = ({ simplified }) => {
     const [newsCategory, setNewsCategory] = useState('Cryptocurrency');
-    const { data: cryptoNews } = useGetCryptoNewsQuery({ newsCategory, count: simplified ? 6 : 12 });
+    const { data: cryptoNews } = useGetCryptoNewsQuery({ newsCategory, count: simplified ? 5 : 10 });
     const { data } = useGetCryptosQuery(100);
 
     if (!cryptoNews?.value) return <Loader />;
